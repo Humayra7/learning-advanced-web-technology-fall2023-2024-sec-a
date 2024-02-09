@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var teacher_1 = require("./teacher");
+var student_1 = require("./student");
+var course_1 = require("./course");
+var csTeacher = new teacher_1.default('Arisha');
+var englishTeacher = new teacher_1.default('Shahan');
+var student1 = new student_1.default('Huma');
+var student2 = new student_1.default('Zayed');
+var student3 = new student_1.default('Sajid');
+csTeacher.createCourse('oop1');
+englishTeacher.createCourse('english 101');
+var csCourse = new course_1.default('oop1', csTeacher);
+var englishCourse = new course_1.default('english 101', englishTeacher);
+csCourse.enrollStudent(student1);
+csCourse.enrollStudent(student2);
+englishCourse.enrollStudent(student2);
+englishCourse.enrollStudent(student3);
